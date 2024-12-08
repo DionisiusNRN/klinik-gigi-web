@@ -2,7 +2,10 @@ export default function Services() {
   return (
     <>
       {/* daftar layanan */}
-      <div className="p-3 md:grid md:grid-cols-2 md:mx-9 lg:mx-32 xl:mx-56">
+      <div
+        id="services"
+        className="p-3 md:grid md:grid-cols-2 md:mx-9 lg:mx-32 xl:mx-56 pt-16 -mt-16"
+      >
         <div className="flex m-3 rounded-3xl shadow-lg overflow-hidden">
           <img
             src="/images/tambal-gigi.jpg"

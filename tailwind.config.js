@@ -16,6 +16,9 @@ module.exports = {
       margin: {
         "500px": "500px",
       },
+      screens: {
+        ssm: "574px",
+      },
     },
   },
   plugins: [],

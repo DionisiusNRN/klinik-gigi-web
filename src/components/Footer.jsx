@@ -1,3 +1,5 @@
+import React from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInstagram,
@@ -7,18 +9,50 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Fungsi untuk menangani navigasi
+  const handleNavigation = (target) => {
+    if (location.pathname !== "/") {
+      // Pindah ke halaman utama, lalu scroll
+      navigate("/");
+      setTimeout(() => {
+        document.getElementById(target)?.scrollIntoView({ behavior: "smooth" });
+      }, 100); // Delay agar navigasi selesai terlebih dahulu
+    } else {
+      // Jika sudah di halaman utama, langsung scroll
+      document.getElementById(target)?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <footer>
-      <div className="bg-blue-300">
+    <footer className="mt-auto">
+      <div className="bottom-0 left-0 w-full bg-blue-300">
         <div className="flex justify-center text-center gap-3 py-5">
           <div className="text-black hover:text-blue-700 hover:underline">
-            <a href="#">Services</a>
+            <button
+              className="hover:text-blue-600"
+              onClick={() => handleNavigation("services")}
+            >
+              Services
+            </button>
           </div>
           <div>
-            <a href="#">Blog</a>
+            <button
+              className="hover:text-blue-600"
+              onClick={() => navigate("/blog")}
+            >
+              Blog
+            </button>
           </div>
           <div>
-            <a href="#">Gallery</a>
+            <button
+              className="hover:text-blue-600"
+              onClick={() => handleNavigation("gallery")}
+            >
+              Gallery
+            </button>
           </div>
         </div>
 

@@ -2,7 +2,7 @@ import React from "react";
 
 const Location = () => {
   return (
-    <div className="mb-10">
+    <div id="location" className="mb-10 pt-16 -mt-16">
       <div className="mx-10 mt-5 rounded-2xl md:mx-40 lg:mx-80 xl:mx-500px overflow-hidden">
         {/* google maps */}
         <div className="">
