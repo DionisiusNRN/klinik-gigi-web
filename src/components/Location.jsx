@@ -36,7 +36,15 @@ const Location = () => {
 
           {/* button get direction */}
           <div className="flex justify-center pt-2 pb-3">
-            <button className="bg-green hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">
+            <button
+              onClick={() =>
+                window.open(
+                  "https://maps.app.goo.gl/xFcRB5RPV41t9r6B8",
+                  "_blank"
+                )
+              }
+              className="bg-green hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full"
+            >
               Get Direction
             </button>
           </div>

@@ -18,9 +18,6 @@ function App() {
             element={
               <>
                 <Home />
-                {/* <Services />
-                <Location />
-                <Gallery /> */}
               </>
             }
           />
